@@ -1,14 +1,19 @@
-## Lua WASM Bindings
+# Lua WASM Bindings
 
-WASM bindings and binaries for Lua 5.0 to 5.4.
+WASM bindings and binaries for 5.4.6
 
-Make sure to run `./scripts/setup.sh` (requires emscripten sdk) first before using `npm run build`.
+## Building
 
-### Important: This currently only includes the bindings used to test TypescriptToLua
+* Install `emscripten` using your native package manager (eg `pacman`, `apt`, `brew`, etc ...)
+    * https://emscripten.org/index.html
+* Run `./scripts/setup.sh`
+* Run `npm run build` (or whatever JS build system you use)
 
-In the future Bindings for the complete API may be added.
+> [!IMPORTANT]  
+> The binding script doesn't include the entire Lua API, some effort might be needed to add missing features.
+> For the complete Lua API reference, visit https://www.lua.org/manual/5.4/manual.html
 
-### Example
+## Example
 
 ```ts
 import { LUA_OK } from "lua-wasm-bindings/dist/lua";
